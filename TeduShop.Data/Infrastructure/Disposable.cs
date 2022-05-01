@@ -9,10 +9,12 @@ namespace TeduShop.Data.Infrastructure
     public class Disposable : IDisposable
     {
         private bool isDisposed;
+
         ~Disposable()
         {
             Dispose(false);
         }
+
         public void Dispose()
         {
             Dispose(true);
@@ -20,13 +22,17 @@ namespace TeduShop.Data.Infrastructure
         }
         private void Dispose(bool disposing)
         {
-            if(!isDisposed && disposing)
+            if (!isDisposed && disposing)
             {
                 DisposeCore();
             }
+
             isDisposed = true;
         }
 
-        protected virtual void DisposeCore() { }
+        // Ovveride this to dispose custom objects
+        protected virtual void DisposeCore()
+        {
+        }
     }
 }
