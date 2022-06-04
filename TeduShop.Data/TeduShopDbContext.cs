@@ -10,7 +10,7 @@ namespace TeduShop.Data
 {
     public class TeduShopDbContext : DbContext
     {
-        public TeduShopDbContext() : base("TduShopConnection")
+        public TeduShopDbContext() : base(@"Data Source=183251-HAINT\SQLEXPRESS;Initial Catalog=TeduShop;Persist Security Info=True;User ID=sa;Password=sa2012")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

@@ -5,7 +5,7 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Service
 {
-    public interface IPostCategorService
+    public interface IPostCategoryService
     {
         PostCategory Add(PostCategory postCategory);
 
@@ -22,7 +22,7 @@ namespace TeduShop.Service
         void Save();
     }
 
-    public class PostCategoryService : IPostCategorService
+    public class PostCategoryService : IPostCategoryService
     {
         private IPostCategoryRepository _postCategoryRepository;
         private IUnitOfWork _unitOfWork;

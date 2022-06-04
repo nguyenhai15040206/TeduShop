@@ -12,6 +12,7 @@ using TeduShop.Service;
 
 namespace TeduShop.Web.Infrastructure.Core
 {
+    
     public class ApiControllerBase : ApiController
     {
         private IErrorService _errorService;
@@ -66,7 +67,6 @@ namespace TeduShop.Web.Infrastructure.Core
             }
             catch
             {
-
             }
         }
     }
